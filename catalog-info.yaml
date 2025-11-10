@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: get.a.nino
-  title: Get-a-NINO
+  title: Get-a-Nino
   description: |
     A blank prototype kit version 13.18.1 with DWP Frontend installed
 
