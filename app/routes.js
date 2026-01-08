@@ -14,12 +14,33 @@ router.post('/queue-type-answer', function (req, res) {
   if (queueType== "home-office"){
     // Send user to next page
     res.redirect('/case-details')
-  } 
-  else {
-    // Send user to ineligible page
-    res.redirect('/404')
   }
 
+   if (queueType== "benefits"){
+    // Send user to next page
+    res.redirect('/404')
+  } 
+
+   if (queueType== "student-loan"){
+    // Send user to next page
+    res.redirect('/404')
+  } 
+
+   if (queueType== "emergency"){
+    // Send user to next page
+    res.redirect('/404')
+  } 
+
+   if (queueType== "validation"){
+    // Send user to next page
+    res.redirect('/404')
+  } 
+
+  if (queueType== "work"){
+    // Send user to next page
+    res.redirect('/404')
+  } 
+  
 })
 
 router.post('/case-decision-answer', function (req, res) {

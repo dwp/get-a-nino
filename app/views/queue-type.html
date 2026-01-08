@@ -22,10 +22,10 @@
 
       <form class="form" action="queue-type-answer" method="post">
 
-        <p>
+        
 {% from "govuk/components/radios/macro.njk" import govukRadios %} 
 {{ govukRadios({ 
-  name: “what-queue”, 
+  name: "what-queue", 
   value: data[`what-queue`], 
   fieldset: 
   { 
@@ -35,7 +35,11 @@
     classes: "govuk-fieldset__legend--l" } },
        hint: {
     text: "Select the type of application" },
-    items: [ { value: "work", text: "Work" }, 
+    items: [ 
+    { 
+      value: "work", 
+      text: "Work" 
+    }, 
 
     { 
       value: "benefits", 
