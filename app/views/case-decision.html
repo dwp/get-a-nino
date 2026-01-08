@@ -20,7 +20,7 @@
    
       </h1>
 
-      <form class="form" action="confirm-allocation.html" method="post">
+      <form class="form" action="case-decision-answer" method="post">
 
         <p>
        {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -44,6 +44,7 @@
 
 {{ govukRadios({
   name: "what-decision",
+   value: data[`what-decision`], 
   fieldset: {
     legend: {
       text: "What is your decision about Anton Deck's case?",

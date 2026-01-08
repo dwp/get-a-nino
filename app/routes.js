@@ -6,7 +6,7 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
-router.post('/queue-type', function (req, res) {
+router.post('/queue-type-answer', function (req, res) {
 
   var queueType = req.session.data['what-queue']
 
@@ -14,14 +14,15 @@ router.post('/queue-type', function (req, res) {
   if (queueType== "home-office"){
     // Send user to next page
     res.redirect('/case-details')
-  } else {
+  } 
+  else {
     // Send user to ineligible page
     res.redirect('/404')
   }
 
 })
 
-router.post('/case-decision', function (req, res) {
+router.post('/case-decision-answer', function (req, res) {
 
   var queueType = req.session.data['what-decision']
 
