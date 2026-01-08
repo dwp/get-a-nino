@@ -20,3 +20,24 @@ router.post('/queue-type', function (req, res) {
   }
 
 })
+
+router.post('/case-decision', function (req, res) {
+
+  var queueType = req.session.data['what-decision']
+
+  // Check whether the variable matches a condition
+  if (queueType== "allocated"){
+    // Send user to next page
+    res.redirect('/confirm-allocation')
+   } 
+
+   if (queueType== "traced"){
+    // Send user to next page
+    res.redirect('/confirm-trace')
+   } 
+    
+   if (queueType== "rejected"){
+    // Send user to next page
+    res.redirect('/confirm-refused')
+   }
+})

@@ -43,7 +43,7 @@
 
 
 {{ govukRadios({
-  name: "contact",
+  name: "what-decision",
   fieldset: {
     legend: {
       text: "What is your decision about Anton Deck's case?",
@@ -56,21 +56,21 @@
   },
   items: [
     {
-      value: "email",
+      value: "allocated",
       text: "Allocated",
       conditional: {
         html: emailHtml
       }
     },
     {
-      value: "phone",
+      value: "traced",
       text: "Traced",
       conditional: {
         html: phoneHtml
       }
     },
     {
-      value: "text",
+      value: "rejected",
       text: "Rejected",
       conditional: {
         html: textHtml
