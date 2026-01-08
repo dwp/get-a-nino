@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+    
+      </h1>
+
+      <form class="form" action="/case-details" method="post">
+
+     {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "what-queue",
+  fieldset: {
+    legend: {
+      text: "National Insurance number applications",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+    
+  },
+  hint: {
+    text: "Select the type of application"
+  },
+  items: [
+    {
+      value: "work",
+      text: "Work"
+    },
+    {
+      value: "benefits",
+      text: "Benefits"
+    },
+    {
+      value: "student-loan",
+      text: "Student loan"
+    },
+    {
+      value: "emergency",
+      text: "Emergency"
+    },
+    {
+      value: "validation",
+      text: "Validation"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "home-office",
+      text: "Home Office"
+    }
+  ]
+}) }}
+
+ {{ govukButton({
+          text: "Next"
+        }) }}
+
+        <div> <a href="www.google.com">Seach for an application</a></div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

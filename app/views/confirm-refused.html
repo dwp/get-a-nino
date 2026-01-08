@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Confirm your decision
+      </h1>
+
+  <strong class="govuk-tag">
+  Refused
+</strong>
+<p>
+
+</p>
+      
+      <p>
+        You have refused Jane Doe's application. Your decision will be sent to the Home Office. 
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Confirm"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
