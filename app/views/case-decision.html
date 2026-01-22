@@ -55,7 +55,14 @@
   hint: {
     text: ""
   },
-  items: [
+  items: [    
+  {
+      value: "traced",
+      text: "Traced",
+      conditional: {
+        html: phoneHtml
+      }
+    },
     {
       value: "allocated",
       text: "Allocated",
@@ -63,13 +70,7 @@
         html: emailHtml
       }
     },
-    {
-      value: "traced",
-      text: "Traced",
-      conditional: {
-        html: phoneHtml
-      }
-    },
+
     {
       value: "rejected",
       text: "Rejected",

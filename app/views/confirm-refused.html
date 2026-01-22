@@ -15,7 +15,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">
+      <h1 class="govuk-heading-l">
         Confirm rejection
       </h1>
 
@@ -26,11 +26,10 @@ Anton Deck's case will be rejected.
 <p>
 The rejected response will automatically be sent to the Home Office.      </p>
 
-      <form action="/confirmation" method="post" novalidate>
+      <p></p>
 
-        {{ govukButton({
-          text: "Confirm and close"
-        }) }}
+    {{ govukButton({  text: "Confirm and close",  href: "/start"}) }}
+
 
       </form>
 

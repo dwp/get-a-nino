@@ -1,4 +1,5 @@
 {% extends "layouts/main.html" %}
+{% from "timeline/macro.njk" import dwpTimeline %}
 
 {% block pageTitle %}
   Content page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,20 +13,15 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">  <div class="govuk-grid-column-full">    
+  <h2 class="govuk-heading-m">  Home Office Case Details</h2>
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Home Office Case Details
-      </h1>
-      
 
-
-      <p>
-       Case number 123456789
-      </p>
-
+<p class="govuk-caption-m">  Case number 123456789</p>
 <form class="form" action="/case-decision" method="post">
 
 
@@ -62,11 +58,11 @@
     </tr>
       <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Correspondence address</th>
-      <td class="govuk-table__cell">123 FAKE ADDRESS, MANCHESTER, M1 2AA</td>
+      <td class="govuk-table__cell">2 MORNINGTON CRESCENT, LONDON, SW1 1AA</td>
     </tr>
         <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Other address</th>
-      <td class="govuk-table__cell">123 FAKE ADDRESS, MANCHESTER, M1 2AA</td>
+      <td class="govuk-table__cell">1 BYKER GROVE, NEWCASTLE, NE1 1AA</td>
     </tr>
       <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Nationality</th>
@@ -90,10 +86,34 @@
     {{ govukButton({
           text: "Next"
         }) }}
-</form>
+
+      </form>
       </p>
 
     </div>
-  </div>
+  
 
+
+  <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Case history
+        </h2>
+        {% from "timeline/macro.njk" import dwpTimeline %}
+
+<h1 class="govuk-heading-l"></h1>
+{{
+        dwpTimeline({ 
+            items: [
+                {
+                    title:  "Application Submitted",
+                    byline:  "",
+                    date:  "16 June 2024 at 10:00am"
+                }
+        ]
+        })
+}}
+  </div>
+</div>
 {% endblock %}
