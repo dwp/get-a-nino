@@ -21,7 +21,8 @@
 
       <form class="form" action="queue-type-answer" method="post">
 
-      
+ <P> Select the type of application</P>
+
 {% from "govuk/components/radios/macro.njk" import govukRadios %} 
 {{ govukRadios({ 
   name: "what-queue", 
@@ -30,7 +31,7 @@
     legend: { 
     classes: "govuk-fieldset__legend--m" } },
        hint: {
-    text: "Select the type of application" },
+    text: "" },
     items: [ 
     { 
       value: "work", 
