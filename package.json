@@ -8,7 +8,7 @@
     "@dwp/dwp-frontend": "3.4.0",
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "@govuk-prototype-kit/step-by-step": "2.2.4",
-    "govuk-frontend": "5.13.0",
+    "govuk-frontend": "5.14.0",
     "govuk-prototype-kit": "13.18.1",
     "hmrc-frontend": "6.112.0",
     "immutable": "5.1.9",
