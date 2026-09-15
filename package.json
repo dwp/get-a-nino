@@ -10,8 +10,8 @@
     "@govuk-prototype-kit/step-by-step": "2.2.4",
     "govuk-frontend": "5.13.0",
     "govuk-prototype-kit": "13.18.1",
-    "hmrc-frontend": "^6.111.0",
-    "immutable": "^5.1.8",
-    "qs": "^6.14.1"
+    "hmrc-frontend": "6.112.0",
+    "immutable": "5.1.9",
+    "qs": "6.16.0"
   }
 }
